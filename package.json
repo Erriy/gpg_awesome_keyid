@@ -1,0 +1,43 @@
+{
+  "name": "gen_awesome_key",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:staged": "lint-staged",
+    "start": "node src/main.js start",
+    "import": "node src/main.js import"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erriy/gen_awesome_key.git"
+  },
+  "author": "erriy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Erriy/gen_awesome_key/issues"
+  },
+  "homepage": "https://github.com/Erriy/gen_awesome_key#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "commander": "^7.2.0",
+    "gpg": "^0.6.0",
+    "openpgp": "^5.0.0-2",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
+    "lint-staged": "^11.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "npm run lint:staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  }
+}
